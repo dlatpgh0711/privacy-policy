@@ -1,76 +1,365 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hawaii Player - 개인정보처리방침</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
-            line-height: 1.7;
-            color: #333333;
-        }
-        h1 {
-            border-bottom: 2px solid #2b6cb0;
-            padding-bottom: 10px;
-            color: #1a365d;
-        }
-        h2 {
-            margin-top: 30px;
-            color: #2b6cb0;
-            font-size: 1.2rem;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 8px;
-        }
-        .footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #e2e8f0;
-            font-size: 0.9rem;
-            color: #718096;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hawaii Player - 개인정보처리방침</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f8fafc;
+      color: #253047;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        "Noto Sans KR", sans-serif;
+      line-height: 1.8;
+      overflow-wrap: anywhere;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 40px auto;
+      padding: 40px;
+      background: #fff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+    }
+
+    h1 {
+      margin-top: 0;
+      padding-bottom: 18px;
+      border-bottom: 2px solid #2563eb;
+      color: #172554;
+      font-size: 28px;
+      line-height: 1.4;
+    }
+
+    h2 {
+      margin-top: 36px;
+      color: #1e40af;
+      font-size: 20px;
+    }
+
+    h3 {
+      margin-top: 24px;
+      color: #1e293b;
+      font-size: 16px;
+    }
+
+    p, ul {
+      margin: 12px 0;
+    }
+
+    ul {
+      padding-left: 24px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: #1d4ed8;
+      text-underline-offset: 3px;
+    }
+
+    .effective-date {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      margin: 18px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 12px 14px;
+      border: 1px solid #dbe3ee;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #eff6ff;
+      color: #1e3a8a;
+    }
+
+    footer {
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 1px solid #e2e8f0;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        margin: 0;
+        padding: 24px 18px;
+        border: 0;
+        border-radius: 0;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <main>
+    <h1>Hawaii Player 개인정보처리방침</h1>
+    <p class="effective-date">
+      시행일자: <time datetime="2026-09-08">2026년 9월 8일</time>
+    </p>
 
-    <h1>개인정보처리방침 (Privacy Policy)</h1>
+    <section aria-labelledby="overview">
+      <h2 id="overview">1. 개요</h2>
+      <p>
+        Hawaii Player(이하 “확장 프로그램”)는 인하대학교 I-Class의
+        강의 재생 관리, 영상 다운로드, Gemini 기반 퀴즈 분석 및
+        영상 요약 기능을 제공합니다.
+      </p>
+      <p>
+        본 방침은 확장 프로그램이 처리하는 정보, 이용 목적,
+        외부 전송 및 보관·삭제 방식을 설명합니다.
+      </p>
+    </section>
 
-    <h2>1. 개요</h2>
-    <p><strong>Hawaii Player</strong>(이하 '확장프로그램')는 사용자의 개인정보를 중요시하며, 관련 법령을 준수하기 위해 최선을 다하고 있습니다. 본 개인정보처리방침은 본 확장프로그램이 사용자의 어떤 정보를 수집, 이용, 보호하는지 설명합니다.</p>
+    <section aria-labelledby="information">
+      <h2 id="information">2. 처리하는 정보와 이용 목적</h2>
 
-    <h2>2. 수집하는 개인정보 항목 및 수집 방법</h2>
-    <p>본 확장프로그램은 사용자의 개인식별정보(이름, 이메일 주소, 전화번호 등)나 민감한 개인정보를 수집, 저장, 전송하지 않습니다.</p>
-    <ul>
-        <li><strong>설정 데이터</strong>: 강의 목록, 자동 재생 관련 설정 등 사용자가 지정한 옵션 데이터는 브라우저 내부 저장소(<code>chrome.storage</code>)에만 저장되며, 외부 서버로 전송되지 않습니다.</li>
-        <li><strong>웹사이트 접근 권한</strong>: 확장프로그램 기능 실행을 위해 현재 활성화된 탭의 URL 및 DOM 요소에 접근하나, 이를 서버로 수집하거나 기록하지 않습니다.</li>
-    </ul>
+      <h3>가. Google 로그인 및 이용약관 동의 정보</h3>
+      <p>
+        Google 로그인 과정에서 사용자 식별자(UID), 이메일 주소 및
+        인증 토큰을 처리합니다. 서버에는 이용약관 동의 여부,
+        동의한 내용과 버전, 동의 시각을 기록합니다.
+      </p>
+      <p>
+        이 정보는 사용자 인증, 기능 이용 권한 확인, 이용약관 동의 관리
+        및 사용자별 요청 제한에 사용됩니다. 확장 프로그램이 Google
+        계정 비밀번호를 직접 입력받거나 저장하지는 않습니다.
+      </p>
 
-    <h2>3. 개인정보의 이용 목적</h2>
-    <p>수집된 설정 정보는 순수하게 사용자의 브라우저 내에서 확장프로그램의 기본 기능(강의 자동 연속 재생 및 플레이어 제어)을 제공하고 유지하기 위한 목적으로만 사용됩니다.</p>
+      <h3>나. 강의 및 설정 정보</h3>
+      <p>
+        강의 목록, 강의명·식별자·주소, 출석 상태와 인정 기간,
+        요구 재생시간, 재생 진행 정보 및 사용자가 선택한 설정을
+        처리합니다.
+      </p>
+      <p>
+        이 정보는 강의 목록 관리, 출석 알림, 재생 제어 및 진행률
+        표시 등에 사용됩니다. 강의 목록과 설정 등은 주로 브라우저의
+        확장 프로그램 저장소에 보관됩니다. AI 기능 이용 시에는
+        아래에서 설명하는 일부 콘텐츠가 외부로 전송됩니다.
+      </p>
 
-    <h2>4. 개인정보의 제3자 제공 및 위탁</h2>
-    <p>본 확장프로그램은 어떠한 사용자 데이터도 제3자에게 판매, 대여, 공유 또는 전송하지 않습니다.</p>
+      <h3>다. 퀴즈 분석 정보</h3>
+      <p>
+        사용자가 퀴즈 풀이 기능을 실행하면 문제와 보기의
+        텍스트·이미지를 추출하여 분석 서버로 전송합니다.
+      </p>
+      <p>
+        분석 결과는 답안 입력과 해설 표시를 위해 사용되며,
+        문제·답안·해설 기록은 기능 제공을 위해 확장 프로그램
+        세션에 보관됩니다.
+      </p>
 
-    <h2>5. 개인정보의 보유 및 파기</h2>
-    <p>모든 설정 데이터는 사용자의 웹 브라우저 내에만 존재합니다. 사용자가 Chrome 브라우저에서 본 확장프로그램을 삭제(제거)하면 관련 데이터는 즉시 자동으로 완전 파기됩니다.</p>
+      <h3>라. 영상 요약 정보</h3>
+      <p>
+        사용자가 영상 요약 기능을 실행하면 강의 영상과 음성을 포함한
+        MP4 파일을 준비하며, 필요한 경우 압축합니다. 처리된 MP4와
+        강의 제목을 외부 서버로 전송하여 요약을 생성합니다.
+      </p>
+      <p>
+        일반 영상 다운로드는 사용자의 기기에 파일을 저장하는
+        기능이며, 다운로드 버튼을 누르는 것만으로 해당 영상을
+        AI 분석 서버에 업로드하지는 않습니다.
+      </p>
 
-    <h2>6. 개인정보 보호책임자 및 문의처</h2>
-    <p>확장프로그램 사용 중 개인정보 보호와 관련된 문의 사항이 있으신 경우 아래 연락처로 문의해 주시기 바랍니다.</p>
-    <ul>
-        <li><strong>개발자/운영자</strong>: LSH</li>
-        <li><strong>이메일</strong>: dlatpgh0711@gmail.com</li>
-    </ul>
+      <h3>마. 운영 및 오류 정보</h3>
+      <p>
+        서비스 운영과 장애 대응을 위해 요청 경로, 처리 단계,
+        오류 코드 및 오류 메시지 등이 서버 로그에 기록될 수 있습니다.
+        오류 내용에 사용자 식별자가 포함된 저장소 파일 경로가
+        포함될 수 있습니다.
+      </p>
+    </section>
 
-    <div class="footer">
-        <p><strong>시행일자</strong>: 2026년 9월 6일</p>
-    </div>
+    <section aria-labelledby="services">
+      <h2 id="services">3. 외부 전송 및 처리 서비스</h2>
+      <p>확장 프로그램은 다음 서비스를 이용합니다.</p>
 
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">서비스</th>
+              <th scope="col">처리 목적 및 정보</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Google 로그인·Firebase Authentication</th>
+              <td>계정 인증 및 인증 토큰 처리</td>
+            </tr>
+            <tr>
+              <th scope="row">운영자가 관리하는 Google Cloud Run 백엔드</th>
+              <td>사용자 인증 확인, AI 요청 처리 및 요청 제한</td>
+            </tr>
+            <tr>
+              <th scope="row">Cloud Firestore</th>
+              <td>사용자 식별자·이메일 및 이용약관 동의 기록 저장</td>
+            </tr>
+            <tr>
+              <th scope="row">Cloud Storage</th>
+              <td>영상 요약을 위한 MP4 임시 저장</td>
+            </tr>
+            <tr>
+              <th scope="row">Vertex AI Gemini</th>
+              <td>
+                퀴즈 텍스트·이미지와 강의 영상·음성 분석 및 결과 생성
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        이러한 외부 전송은 해당 기능을 제공하기 위해 이루어집니다.
+        각 서비스 제공자의 데이터 처리는 해당 서비스의 적용 약관 및
+        개인정보 보호 정책에 따릅니다.
+      </p>
+      <p>
+        확장 프로그램 운영자는 사용자 데이터를 판매하거나
+        광고 타기팅 목적으로 사용하지 않습니다.
+      </p>
+    </section>
+
+    <section aria-labelledby="retention">
+      <h2 id="retention">4. 정보의 보관 및 삭제</h2>
+
+      <h3>가. 브라우저에 저장되는 정보</h3>
+      <p>
+        강의 목록과 설정은 사용자가 변경하거나 관련 초기화 기능을
+        이용하여 관리할 수 있습니다. 확장 프로그램을 제거하면
+        브라우저가 관리하는 해당 확장 프로그램 저장소가 삭제됩니다.
+      </p>
+      <p>
+        퀴즈 처리 기록은 새 풀이 시작, 중지, 로그아웃, 탭 닫기 또는
+        브라우저 종료 등의 동작에 따라 정리됩니다.
+      </p>
+
+      <h3>나. 로그인 및 서버 동의 기록</h3>
+      <p>
+        로그아웃하면 확장 프로그램의 로그인 세션과 관련 인증 캐시를
+        정리합니다. 다만 로그아웃이나 확장 프로그램 제거가 Firebase
+        계정 및 서버에 저장된 이용약관 동의 기록까지 삭제하는 것은
+        아닙니다.
+      </p>
+      <p>
+        서버 동의 기록에는 현재 자동 만료·삭제 기간이 설정되어
+        있지 않습니다. 해당 정보의 삭제는 아래 문의처로
+        요청할 수 있습니다.
+      </p>
+
+      <h3>다. 업로드 영상</h3>
+      <p>
+        요약 요청이 정상적으로 처리되면 업로드된 MP4의 삭제를
+        시도합니다.
+      </p>
+      <p>
+        다만 서버 오류, 시간 초과, 처리 중단, 업로드 후 요약 요청
+        미실행 또는 삭제 실패 등의 경우에는 파일이 남을 수 있습니다.
+        확장 프로그램 제거만으로 서버의 업로드 파일이 삭제되지는
+        않습니다.
+      </p>
+      <p>
+        남아 있는 업로드 파일의 삭제는 아래 문의처로
+        요청할 수 있습니다.
+      </p>
+
+      <h3>라. 다운로드 파일 및 운영 로그</h3>
+      <p>
+        사용자가 기기에 다운로드한 영상·문제·해설 파일은
+        사용자가 직접 삭제해야 합니다.
+      </p>
+      <p>
+        서버 운영 로그의 보관 및 삭제는 운영 중인
+        Google Cloud 로그 설정에 따릅니다.
+      </p>
+    </section>
+
+    <section aria-labelledby="choices">
+      <h2 id="choices">5. 사용자의 선택 및 권리</h2>
+      <p>
+        사용자는 확장 프로그램 설정에서 퀴즈 기능을 끄거나,
+        진행 중인 퀴즈 풀이·영상 요약을 중단할 수 있습니다.
+        이미 외부 서버로 전송된 정보가 중단과 동시에 모두
+        삭제되는 것은 아닙니다.
+      </p>
+      <p>
+        사용자는 Google 로그인 권한을 철회하거나 확장 프로그램을
+        제거할 수 있으며, 운영자가 보관하는 개인정보에 대한
+        열람·정정·삭제를 아래 문의처로 요청할 수 있습니다.
+      </p>
+      <p>
+        요청 처리 시 해당 계정의 본인 여부를 확인하는 데 필요한
+        정보를 요청할 수 있습니다. 비밀번호나 인증 토큰을
+        이메일로 보내지 마세요.
+      </p>
+    </section>
+
+    <section aria-labelledby="security">
+      <h2 id="security">6. 정보 보호</h2>
+      <p>
+        인증 및 AI 백엔드 통신에는 HTTPS를 사용합니다.
+        AI 백엔드는 인증과 이용약관 동의 상태를 확인하여
+        요청을 처리합니다.
+      </p>
+      <p>
+        서비스 운영에 필요한 범위에서 접근 권한을 관리하고,
+        불필요한 개인정보 노출을 줄이기 위한 조치를 적용합니다.
+      </p>
+    </section>
+
+    <section aria-labelledby="changes">
+      <h2 id="changes">7. 방침 변경</h2>
+      <p>
+        기능이나 데이터 처리 방식이 변경되면 본 방침과 시행일자를
+        갱신합니다. 중요한 데이터 처리 변경 사항은 확장 프로그램
+        또는 서비스 안내를 통해 알리고, 필요한 경우 별도의
+        동의를 받습니다.
+      </p>
+    </section>
+
+    <section aria-labelledby="contact">
+      <h2 id="contact">8. 문의처</h2>
+      <ul>
+        <li><strong>프로그램명:</strong> Hawaii Player</li>
+        <li><strong>개발자·운영자:</strong> LSH</li>
+        <li>
+          <strong>이메일:</strong>
+          <a href="mailto:dlatpgh0711@gmail.com">
+            dlatpgh0711@gmail.com
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <footer>
+      Hawaii Player · 개인정보처리방침
+    </footer>
+  </main>
 </body>
 </html>
